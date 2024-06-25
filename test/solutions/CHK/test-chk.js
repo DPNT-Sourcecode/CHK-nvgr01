@@ -160,7 +160,38 @@ describe('Checkout Challenge: returns the total basket value', function () {
     const result = checkout(skus);
     assert.equal(result, 200);
   });
+
+  it('should apply discounts for 3Q', function () {
+    const skus = "QQQ";
+    const result = checkout(skus);
+    assert.equal(result, 80);
+  });
+
+  it('should apply discounts for 2V', function () {
+    const skus = "VV";
+    const result = checkout(skus);
+    assert.equal(result, 90);
+  });
+
+  it('should apply discounts for 3V', function () {
+    const skus = "VVV";
+    const result = checkout(skus);
+    assert.equal(result, 130);
+  });
+
+  it('should apply discounts for 5V', function () {
+    const skus = "VVVVV";
+    const result = checkout(skus);
+    assert.equal(result, 220);
+  });
+
+  it('should apply discounts for 3N 1M', function () {
+    const skus = "NNNM";
+    const result = checkout(skus);
+    assert.equal(result, 120);
+  });
 });
+
 
 
 
