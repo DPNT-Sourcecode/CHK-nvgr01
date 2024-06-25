@@ -256,5 +256,24 @@ describe('Checkout Challenge: returns the total basket value', function () {
     const result = checkout(skus);
     assert.equal(result, 65);
   });
+
+  it('should apply discounts for ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ', function () {
+    const skus = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const result = checkout(skus);
+    assert.equal(result, 1602);
+  });
+
+  it('should apply discounts for LGCKAQXFOSKZGIWHNRNDITVBUUEOZXPYAVFDEPTBMQLYJRSMJCWH', function () {
+    const skus = "LGCKAQXFOSKZGIWHNRNDITVBUUEOZXPYAVFDEPTBMQLYJRSMJCWH";
+    const result = checkout(skus);
+    assert.equal(result, 1602);
+  });
+
+  it('should apply discounts for AAAAAPPPPPUUUUEEBRRRQAAAHHHHHHHHHHKKVVVBBNNNMFFFQQQVVHHHHHSTX', function () {
+    const skus = "AAAAAPPPPPUUUUEEBRRRQAAAHHHHHHHHHHKKVVVBBNNNMFFFQQQVVHHHHHSTX";
+    const result = checkout(skus);
+    assert.equal(result, 1655);
+  });
 });
+
 
