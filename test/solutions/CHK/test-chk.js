@@ -101,4 +101,3 @@ describe('Checkout Challenge: returns the total basket value', function () {
     assert.equal(result, 160);
 	});
 });
-
