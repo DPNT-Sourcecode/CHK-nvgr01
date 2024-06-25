@@ -10,5 +10,3 @@ describe('Hello world Challenge: says hello to the world', function () {
 		assert.equal(hello(friendName), `Hello, ${friendName}!`);
 	});
 });
-
-
