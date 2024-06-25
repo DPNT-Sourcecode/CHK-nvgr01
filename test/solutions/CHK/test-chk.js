@@ -202,5 +202,18 @@ describe('Checkout Challenge: returns the total basket value', function () {
     const result = checkout(skus);
     assert.equal(result, 120);
   });
+
+  it('should apply discounts for 1S 1T 1X', function () {
+    const skus = "STX";
+    const result = checkout(skus);
+    assert.equal(result, 45);
+  });
+
+  it('should apply discounts for 1S 1T 1X 1Y 1Z', function () {
+    const skus = "STXYZ";
+    const result = checkout(skus);
+    assert.equal(result, 82);
+  });
 });
+
 
