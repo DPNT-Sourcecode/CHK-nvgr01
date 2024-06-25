@@ -7,7 +7,8 @@ const hello = require('../../../lib/solutions/HLO/hello');
 describe('Hello world Challenge: says hello to the world', function () {
 	it('should return Hello World!', function () {
     const friendName = "John";
-		assert.equal(hello(friendName), "Hello, World!");
+		assert.equal(hello(friendName), `Hello, ${friendName}!`);
 	});
 });
+
 
