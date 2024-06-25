@@ -198,8 +198,9 @@ describe('Checkout Challenge: returns the total basket value', function () {
   });
 
   it('should apply discounts for 3U', function () {
-    const skus = "RRRQ";
+    const skus = "UUU";
     const result = checkout(skus);
-    assert.equal(result, 150);
+    assert.equal(result, 120);
   });
 });
+
