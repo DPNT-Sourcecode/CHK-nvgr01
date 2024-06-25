@@ -12,7 +12,7 @@ describe('Checkout Challenge: returns the total basket value', function () {
 	});
 
   it('should return -1', function () {
-    const skus = "ABCDEF";
+    const skus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     const result = checkout(skus);
     assert.equal(result, -1);
 	});
@@ -100,5 +100,18 @@ describe('Checkout Challenge: returns the total basket value', function () {
     const result = checkout(skus);
     assert.equal(result, 160);
 	});
+
+  it('should apply discounts for 2F', function () {
+    const skus = "FF";
+    const result = checkout(skus);
+    assert.equal(result, 10);
+	});
+  
+  it('should apply discounts for 4F', function () {
+    const skus = "FFFF";
+    const result = checkout(skus);
+    assert.equal(result, 20);
+	});
 });
+
 
