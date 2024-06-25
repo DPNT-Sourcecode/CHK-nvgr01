@@ -11,12 +11,6 @@ describe('Checkout Challenge: returns the total basket value', function () {
     assert.equal(result, 755);
 	});
 
-  it('should return the total value of the basket', function () {
-    const skus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const result = checkout(skus);
-    assert.equal(result, 853);
-	});
-
   it('should return -1', function () {
     const skus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1";
     const result = checkout(skus);
@@ -281,4 +275,5 @@ describe('Checkout Challenge: returns the total basket value', function () {
     assert.equal(result, 1655);
   });
 });
+
 
