@@ -6,13 +6,13 @@ const checkout = require('../../../lib/solutions/CHK/checkout');
 
 describe('Checkout Challenge: returns the total basket value', function () {
   it('should return the total value of the basket', function () {
-    const skus = "ABCD";
+    const skus = "ABCDE";
     const result = checkout(skus);
-    assert.equal(result, 115);
+    assert.equal(result, 155);
 	});
 
   it('should return -1', function () {
-    const skus = "ABCDE";
+    const skus = "ABCDEF";
     const result = checkout(skus);
     assert.equal(result, -1);
 	});
@@ -38,19 +38,19 @@ describe('Checkout Challenge: returns the total basket value', function () {
   it('should apply discounts for 6A', function () {
     const skus = "AAAAAA";
     const result = checkout(skus);
-    assert.equal(result, 260);
+    assert.equal(result, 250);
 	});
 
-  it('should apply discounts for 2B', function () {
+  it('should apply discounts for 4B', function () {
     const skus = "BBBB";
     const result = checkout(skus);
     assert.equal(result, 90);
 	});
 
-  it('should apply discounts for 6A and B', function () {
+  it('should apply discounts for 6A and 4B', function () {
     const skus = "AAAAAABBBB";
     const result = checkout(skus);
-    assert.equal(result, 350);
+    assert.equal(result, 340);
 	});
 
   it('should apply discount for 5A', function () {
@@ -64,7 +64,14 @@ describe('Checkout Challenge: returns the total basket value', function () {
     const result = checkout(skus);
     assert.equal(result, 400);
 	});
+
+  it('should apply discount for 2E with B in checkout', function () {
+    const skus = "BEE";
+    const result = checkout(skus);
+    assert.equal(result, 80);
+	});
 });
+
 
 
 
