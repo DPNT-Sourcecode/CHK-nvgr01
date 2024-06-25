@@ -230,9 +230,10 @@ describe('Checkout Challenge: returns the total basket value', function () {
   it('should apply discounts for 5H', function () {
     const skus = "HHHHH";
     const result = checkout(skus);
-    assert.equal(result, 30);
+    assert.equal(result, 45);
   });
 });
+
 
 
 
