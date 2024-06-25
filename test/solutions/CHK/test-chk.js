@@ -92,7 +92,7 @@ describe('Checkout Challenge: returns the total basket value', function () {
   it('should apply discount for 4E with B in checkout', function () {
     const skus = "EEEEB";
     const result = checkout(skus);
-    assert.equal(result, 190);
+    assert.equal(result, 160);
 	});
 
   it('should apply discount for 4E with 2B in checkout', function () {
@@ -101,3 +101,4 @@ describe('Checkout Challenge: returns the total basket value', function () {
     assert.equal(result, 160);
 	});
 });
+
