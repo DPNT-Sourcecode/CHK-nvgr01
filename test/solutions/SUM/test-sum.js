@@ -17,4 +17,3 @@ describe('SUM challenge: adding two numbers', function () {
 		assert.throws(() => sum(1, 200), Error, "x and y must be between 0 and 100");
 	});
 });
-
