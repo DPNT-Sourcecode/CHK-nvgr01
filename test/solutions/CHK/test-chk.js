@@ -12,7 +12,7 @@ describe('Checkout Challenge: returns the total basket value', function () {
 	});
 
   it('should return -1', function () {
-    const skus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const skus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1";
     const result = checkout(skus);
     assert.equal(result, -1);
 	});
@@ -149,3 +149,4 @@ describe('Checkout Challenge: returns the total basket value', function () {
     assert.equal(result, 60);
 	});
 });
+
