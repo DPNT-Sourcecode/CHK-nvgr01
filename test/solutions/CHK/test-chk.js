@@ -35,19 +35,19 @@ describe('Checkout Challenge: returns the total basket value', function () {
     assert.equal(result, 175);
 	});
 
-  it('should apply two discounts for A', function () {
+  it('should apply discounts for 6A', function () {
     const skus = "AAAAAA";
     const result = checkout(skus);
     assert.equal(result, 260);
 	});
 
-  it('should apply two discounts for B', function () {
+  it('should apply discounts for 2B', function () {
     const skus = "BBBB";
     const result = checkout(skus);
     assert.equal(result, 90);
 	});
 
-  it('should apply two discounts for A and B', function () {
+  it('should apply discounts for 6A and B', function () {
     const skus = "AAAAAABBBB";
     const result = checkout(skus);
     assert.equal(result, 350);
@@ -65,5 +65,6 @@ describe('Checkout Challenge: returns the total basket value', function () {
     assert.equal(result, 400);
 	});
 });
+
 
 
