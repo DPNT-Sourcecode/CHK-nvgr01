@@ -52,4 +52,11 @@ describe('Checkout Challenge: returns the total basket value', function () {
     const result = checkout(skus);
     assert.equal(result, 350);
 	});
+
+  it('should apply discount for 5A', function () {
+    const skus = "AAAAA";
+    const result = checkout(skus);
+    assert.equal(result, 200);
+	});
 });
+
