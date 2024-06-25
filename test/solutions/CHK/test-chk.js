@@ -70,8 +70,16 @@ describe('Checkout Challenge: returns the total basket value', function () {
     const result = checkout(skus);
     assert.equal(result, 80);
 	});
+
+  it('should apply discount for 2E with 2B in checkout', function () {
+    const skus = "BBEE";
+    const result = checkout(skus);
+    assert.equal(result, 110);
+	});
+
+  it('should apply discount for 4E with B in checkout', function () {
+    const skus = "BEE";
+    const result = checkout(skus);
+    assert.equal(result, 160);
+	});
 });
-
-
-
-
