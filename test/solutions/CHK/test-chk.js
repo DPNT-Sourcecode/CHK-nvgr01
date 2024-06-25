@@ -6,9 +6,9 @@ const checkout = require('../../../lib/solutions/CHK/checkout');
 
 describe('Checkout Challenge: returns the total basket value', function () {
   it('should return the total value of the basket', function () {
-    const skus = "ABCDE";
+    const skus = "ABCDEF";
     const result = checkout(skus);
-    assert.equal(result, 155);
+    assert.equal(result, 165);
 	});
 
   it('should return -1', function () {
@@ -101,3 +101,4 @@ describe('Checkout Challenge: returns the total basket value', function () {
     assert.equal(result, 160);
 	});
 });
+
